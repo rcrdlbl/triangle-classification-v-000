@@ -4,7 +4,7 @@ class Triangle
 
   def initialize(side1:, side2:, side3:)
     @side1, @side2, @side3 = [side1, side2, side3].sort
-    raise TriangleError if side1 <= 0 or side1 + side2 <= side3
+    raise TriangleError if @side1 <= 0 or @side1 + @side2 <= @side3
   end
 
   def kind
