@@ -8,6 +8,14 @@ class Triangle
   end
 
   def kind
+    if @side1 == @side3
+      return :equilateral
+    elsif @side1 == @side2 or @side2 == @side3
+      return :isosceles
+    else
+      return :scalene
+    end
+
   end
 
   class TriangleError < StandardError
